@@ -1,0 +1,51 @@
+<div ng-init ="init()">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Species</th>
+        <th scope="col">Homeworld</th>
+        <th scope="col">Height</th>
+        <th scope="col">Mass</th>
+        <th scope="col">Hair Color</th>
+        <th scope="col">Skin Color</th>
+        <th scope="col">Eye Color</th>
+        <th scope="col">Birth Year</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Films</th>
+        <th scope="col">Vehicle</th>
+        <th scope="col">Starships</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="char in characters">
+      <tr>
+        <td>{{char.name}}</td>
+        <td>{{char.species}}</td>
+        <td>{{char.homeworld}}</td>
+        <td>{{char.height}}</td>
+        <td>{{char.mass}}</td>
+        <td>{{char.hair_color}}</td>
+        <td>{{char.skin_color}}</td>
+        <td>{{char.eye_color}}</td>
+        <td>{{char.birth_year}}</td>
+        <td>{{char.gender}}</td>
+        <td>
+          <ul ng-repeat="film in char.films">
+            <li>{{film}}</li>
+          </ul>
+        </td>
+        <td>
+          <ul ng-repeat="veh in char.vehicles">
+            <li>{{veh}}</li>
+          </ul>
+        </td>
+        <td>
+          <ul ng-repeat="ship in char.starships">
+            <li>{{ship}}</li>
+          </ul>
+        </td>
+        <td>
+      </tr>
+    </tbody>
+  </table>
+</div>
